@@ -1,0 +1,146 @@
+<html>
+
+<head>
+    <script>
+        //Clase hospital
+        class Hostpital {
+
+            constructor(nombre, ciudad, numPacientes) {
+
+                this.nombre = nombre;
+                this.ciudad = ciudad;
+                this.numPacientes = numPacientes;
+
+            }
+            //Método que muestra el hospital y sus pacientes
+            mostrar() {
+
+                let mensajePaciente = "";
+
+                let i = 0;
+
+                while (i < this.numPacientes.length) {
+
+                    mensajePaciente = mensajePaciente + "DNI: " + numPacientes[i].DNI + " Nombre: " + numPacientes[i].nombre + " Enfermedad: " + numPacientes[i].enfermedad + " \n";
+
+                    i++;
+
+                }
+
+                alert("Nombre: " + this.nombre + " Ciudad: " + this.ciudad + " Enfermedad: " + this.numPacientes.length + "\nPacientes: \n" + mensajePaciente);
+
+            }
+
+        }
+        //Clase paciente
+        class Paciente {
+
+            constructor(DNI, nombre, enfermedad) {
+
+                this.DNI = DNI;
+                this.nombre = nombre;
+                this.enfermedad = enfermedad;
+
+            }
+            //Método que elimina a un paciente según su DNI
+            altaPaciente(numPacientes, DNIPaciente) {
+
+                let i = 0;
+
+                alert("Lista de pacientes antes: " + numPacientes.length);
+
+                while (i < numPacientes.length) {
+
+                    if (numPacientes[i].DNI == DNIPaciente) {
+
+                        numPacientes.splice(i, 1);
+
+                        alert("El paciente ha sido dado de alta.");
+
+                        //alert("Lista de pacientes después: " + numPacientes.length);
+
+                    }
+
+                    i++;
+
+                }
+
+                alert("Lista de pacientes después: " + numPacientes.length);
+
+            }
+            //Método que muestra el paciente creado
+            mostrar() {
+
+                alert("Paciente creado: \nDNI: " + this.DNI + " Nombre: " + this.nombre + " Enfermedad: " + this.enfermedad)
+
+            }
+            //Método que crea un nuevo paciente
+            crearPaciente(numPacientes, paciente) {
+
+                let DNI = 0, nombre = "", enfermedad = "";
+
+                DNI = (prompt("Introduce el DNI del paciente.")).toString();
+                nombre = (prompt("Introduce nombre del paciente.")).toString();
+                enfermedad =(prompt("Introduce la enfermedad del paciente.")).toString();
+
+                paciente = new Paciente(DNI, nombre, enfermedad);
+                numPacientes.push(paciente);
+
+                paciente.mostrar();
+
+            }
+
+        }
+        //Array de pacientes
+        var numPacientes = [];
+        //Creación de los objetos paciente e introducción en el array
+        let paciente = new Paciente('45954612S', 'Javier', 'Hemorragia');
+        numPacientes.push(paciente);
+
+        paciente = new Paciente('98487561L', 'Mario', 'Apendicitis');
+        numPacientes.push(paciente);
+
+        paciente = new Paciente('97846145F', 'María', 'Infarto');
+        numPacientes.push(paciente);
+        //Creación del objeto hospital
+        let hospital = new Hostpital('La arboleda', 'Cádiz', numPacientes);
+
+        let opcion = 0, DNIPaciente = "";
+        //Bucle del menú de opciones
+        while (opcion != 4) {
+
+            opcion = parseInt(prompt("1 para de alta a un paciente. \n 2 para crear un paciente. \n 3 para mostrar el hospital con sus pacientes. \n 4 para salir."));
+            //Selector de opciones
+            switch (opcion) {
+                //Opción para eliminar paciente
+                case 1:
+
+                    DNIPaciente = (prompt("Introduce el DNI del paciente.")).toString();
+                    paciente.altaPaciente(numPacientes, DNIPaciente);
+
+                    break;
+                //Opción para crear paciente
+                case 2:
+
+                    paciente.crearPaciente(numPacientes, paciente);
+
+                    break;
+                //Opción para mostrar hospital
+                case 3:
+
+                    hospital.mostrar();
+
+                    break;
+
+            }
+
+        }
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
