@@ -19,12 +19,12 @@ function ejercicio1() {
         //Introducción del número para adivinar
         adivinar = parseInt(prompt("Introduce el número para adivinar el número aleatorio."));
         //Valor del número aleatorio
-        document.write("<p>Número aleatorio: " + aleatorio(maximo) + ".<p>");
+        document.write("Número aleatorio: " + aleatorio(maximo));
 
 
     }
     //Número aleatorio adivinado
-    document.write("<p>Número aleatorio adivinado: " + adivinar + ".<p>");
+    document.write("<p>Número aleatorio adivinado: " + adivinar + "<p>");
 
     document.close();
 
