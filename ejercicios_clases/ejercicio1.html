@@ -1,0 +1,147 @@
+<html>
+
+<head>
+    <script>
+        //Clase colegio
+        class Colegio {
+
+            constructor(nombre, numerosAulas, numeroAlumnos) {
+
+                this.nombre = nombre;
+                this.numerosAulas = numerosAulas;
+                this.numeroAlumnos = numeroAlumnos;
+
+            }
+            //Método que muestra el colegio y sus alumnos
+            mostrar() {
+
+                let mensajeAlumno = "";
+
+                let i = 0;
+
+                while (i < this.numeroAlumnos.length) {
+
+                    mensajeAlumno = mensajeAlumno + "DNI: " + numeroAlumnos[i].DNI + " Nombre: " + numeroAlumnos[i].nombre + " Nota media: " + numeroAlumnos[i].notaMedia + " \n";
+
+                    i++;
+
+                }
+
+                alert("Nombre: " + this.nombre + " Número de aulas: " + this.numerosAulas + " Número de alumnos: " + this.numeroAlumnos.length + "\nAlumnos: \n" + mensajeAlumno);
+
+            }
+
+        }
+        //Clase alumno
+        class Alumno {
+
+            constructor(DNI, nombre, notaMedia) {
+
+                this.DNI = DNI;
+                this.nombre = nombre;
+                this.notaMedia = notaMedia;
+
+            }
+            //Método que cambia nota media del alumno
+            modificarNotaMediaAlumno(numeroAlumnos, DNIAlumno, nuevaNota) {
+
+                let j = 0;
+
+                while (j < numeroAlumnos.length) {
+
+                    if (numeroAlumnos[j].DNI == DNIAlumno) {
+
+                        numeroAlumnos[j].notaMedia = nuevaNota;
+
+                        alert("Nota cambiada a " + numeroAlumnos[j].notaMedia + ".");
+
+                    }
+
+                    j++;
+
+                }
+
+            }
+            //Método que muestra el alumno creado
+            mostrar(numeroAlumnos, DNIAlumno) {
+
+                alert("Alumno creado: \nDNI: " + this.DNI + " Nombre: " + this.nombre + " Nota media: " + this.notaMedia);
+
+            }
+            //Método que crea un nuevo alumno
+            crearAlumno(numeroAlumnos, alumno) {
+
+                let DNI = 0, nombre = "", notaMedia = "";
+
+                DNI = (prompt("Introduce el DNI del alumno.")).toString();
+                nombre = (prompt("Introduce nombre del alumno.")).toString();
+                notaMedia = parseInt(prompt("Introduce la nota media del alumno."));
+
+                alumno = new Alumno(DNI, nombre, notaMedia);
+                numeroAlumnos.push(alumno);
+
+                alumno.mostrar();
+
+            }
+
+        }
+
+        function main() {
+            //Array de alumnos
+            var numeroAlumnos = [];
+            //Creación de los objetos alumno e introducción en el array
+            let alumno = new Alumno('45954612S', 'Javier', 7);
+            numeroAlumnos.push(alumno);
+
+            alumno = new Alumno('98487561L', 'Mario', 6);
+            numeroAlumnos.push(alumno);
+
+            alumno = new Alumno('97846145F', 'María', 8);
+            numeroAlumnos.push(alumno);
+            //Creación del objeto colegio
+            let colegio = new Colegio('Mar de Cádiz', 30, numeroAlumnos);
+
+            let opcion = 0, DNIAlumno = "", nuevaNota = 0;
+            //Bucle del menú de opciones
+            while (opcion != 4) {
+
+                opcion = parseInt(prompt("1 para cambiar nota media de alumno. \n 2 para crear un alumno. \n 3 para mostrar el colegio con sus alumnos. \n 4 para salir."));
+
+                switch (opcion) {
+                    //Opción para cambiar nota media del alumno
+                    case 1:
+
+                        DNIAlumno = (prompt("Introduce el DNI del alumno.")).toString();
+                        nuevaNota = parseInt(prompt("Introduce la nueva nota media del alumno."));
+                        alumno.modificarNotaMediaAlumno(numeroAlumnos, DNIAlumno, nuevaNota);
+
+                        break;
+                    //Opción para crear paciente
+                    case 2:
+
+                        alumno.crearAlumno(numeroAlumnos, alumno);
+
+                        break;
+                    //Opción para mostrar hospital
+                    case 3:
+
+                        colegio.mostrar();
+
+                        break;
+
+                }
+
+            }
+
+        }
+
+        main();
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
