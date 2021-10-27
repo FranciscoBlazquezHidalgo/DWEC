@@ -2,6 +2,7 @@
 //Ejercicio 1 de clases
 
 function ejercicio1() {
+    //Clase colegio
     class Colegio {
 
         constructor(nombre, numerosAulas, numeroAlumnos) {
@@ -84,7 +85,7 @@ function ejercicio1() {
         }
 
     }
-
+    //Función del menú principal
     function main() {
         //Array de alumnos
         var numeroAlumnos = [];
@@ -171,7 +172,7 @@ function ejercicio2() {
         }
 
     }
-    //Clase aeropuerto
+    //Clase vuelo
     class Vuelo {
 
         constructor(codigo, hora_llegada, hora_salida) {
@@ -275,7 +276,7 @@ function ejercicio2() {
         }
 
     }
-
+    //Función del menú principal
     function main() {
         //Array de vuelos
         var numeroVuelosDiarios = [];
@@ -348,7 +349,7 @@ function ejercicio2() {
 function ejercicio3() {
 
     //Clase hospital
-    class Hostpital {
+    class Hospital {
 
         constructor(nombre, ciudad, numPacientes) {
 
@@ -436,7 +437,7 @@ function ejercicio3() {
         }
 
     }
-
+    //Función del menú principal
     function main() {
         //Array de pacientes
         var numPacientes = [];
@@ -450,7 +451,7 @@ function ejercicio3() {
         paciente = new Paciente('97846145F', 'María', 'Infarto');
         numPacientes.push(paciente);
         //Creación del objeto hospital
-        let hospital = new Hostpital('La arboleda', 'Cádiz', numPacientes);
+        let hospital = new Hospital('La arboleda', 'Cádiz', numPacientes);
 
         let opcion = 0, DNIPaciente = "";
         //Bucle del menú de opciones
