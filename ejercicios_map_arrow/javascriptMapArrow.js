@@ -61,7 +61,7 @@ function ejercicio2() {
         return (numero1 / numero2);
 
     };
-
+    //Función del menú principal
     function main() {
 
         document.open();
@@ -167,6 +167,7 @@ function ejercicio3() {
         return mensaje;
 
     };
+    //Función del menú principal
     function main() {
         //Mapa de ciudades
         var mapa = new Map();
