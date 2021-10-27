@@ -289,8 +289,6 @@ function ejercicio2() {
             let horaLLegada = llegada.substr(0, 2);
             let horaSalida = salida.substr(0, 2);
 
-            alert(llegada.substr(0, 2) + ":" + salida.substr(0, 2));
-
             if (horaSalida > horaLLegada) {
 
                 alert("La hora de salida es superior a la hora de llegada.");
@@ -312,7 +310,6 @@ function ejercicio2() {
 
             let minutoLLegada = llegada.substr(3, 4);
             let minutoSalida = salida.substr(3, 4);
-            alert(minutoLLegada + ":" + minutoSalida);
 
             if (minutoSalida > minutoLLegada) {
 
