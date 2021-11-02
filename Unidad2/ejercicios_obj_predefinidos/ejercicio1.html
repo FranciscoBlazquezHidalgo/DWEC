@@ -1,0 +1,114 @@
+<html>
+
+<head>
+    <script>
+        /*let cad="Francisco:Blázquez:45338145Q";
+        let dni;
+        //Pasa String a mayuscula
+        cad=cad.toUpperCase();
+        alert("Cadena en mayúscula: "+cad);
+        //Separa las palabras con comas cuando haya un determinado carácter
+        let splitTodosCampos=cad.split(":");
+        //Consigue la palabra cuando haya un determinado carácter
+        let splitCampo=cad.split(":", 1);
+        alert("Cadena con split en todo: "+splitTodosCampos);
+        alert("Cadena con un split: "+splitCampo);
+        //Consigue la tercera palabra de un String
+        dni=splitTodosCampos[2];
+        //Cambia un carácter de una palabra por otro determinado
+        dni=dni.replace("3","9");
+        alert("DNI modificado en el número 3 por 9: "+dni);
+        alert("Letra 5 del DNI: "+dni.charAt(4));
+        //Objeto fecha*/
+        //Fecha en cadena de texto
+
+        //Fecha indicando año,mes, dia, hora, minuto, segundo y milisegundo
+        //d=new Date(99,5,24,11,33,30,0);
+        //Fecha indicando año, mes y dia
+        //d=new Date(99,5,24);
+
+        //Función que indica la fecha mayor
+        function comprobarFechas() {
+
+            let fecha1 = prompt("Introduce la fecha 1");
+            let f1 = new Date(fecha1);
+            let fecha2 = prompt("Introduce la fecha 2");
+            let f2 = new Date(fecha2);
+
+            if (f1 > f2) {
+
+                alert("La fecha 1 es mayor a la fecha 2");
+
+            } else if (f1 < f2) {
+
+                alert("La fecha 2 es mayor a la fecha 1");
+
+            } else {
+
+                alert("Las fechas son iguales");
+
+            }
+
+
+        }
+        //Función que calcula si una persona es mayor de edad a partir de su fecha de nacimiento
+        function comprobarMayoriaEdad() {
+
+            let fechaNacimiento = prompt("Introduce la fecha de nacimiento");
+            let fNacimiento = new Date(fechaNacimiento);
+
+            let fechaActual = new Date();
+
+            let años = fechaActual.getFullYear() - fNacimiento.getFullYear();
+            let meses = fechaActual.getMonth() - fNacimiento.getMonth();
+            if (meses < 0 || (meses === 0 && fechaActual.getDate() < fNacimiento.getDate())) {
+
+                años--;
+
+            }
+            if(años>18 || años==18){
+
+                alert("Es mayor de edad");
+
+            }else{
+
+                alert("No es mayor de edad");
+
+            }
+
+
+        }
+        //Función que comprueba los días de diferencia entre 2 días
+        function comprobarDiferenciaFechas() {
+
+            let fecha1 = prompt("Introduce la fecha 1");
+            let f1 = new Date(fecha1);
+            let fecha2 = prompt("Introduce la fecha 2");
+            let f2 = new Date(fecha2);
+
+            let diferencia = f1.getTime() - f2.getTime();
+            let diferenciaDias = diferencia / (1000 * 3600 * 24);
+            alert("La diferencia es de : " + Math.abs(diferenciaDias) + " días.");
+
+        }
+
+        //let d1 = new Date(2014, 3, 5);
+        //let d2 = new Date(2014, 3, 5);
+        //alert(d1.toDateString());
+        //alert(d2.toDateString());
+        //alert(d1.getFullYear());
+        //alert(d2.getMonth());
+        //alert(d1.getDate());
+
+
+        comprobarFechas();
+        comprobarMayoriaEdad();
+        comprobarDiferenciaFechas();
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
