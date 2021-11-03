@@ -1,0 +1,21 @@
+<html>
+
+<head>
+    <script>
+        let hoy = new Date();
+
+        let diaNavidad = new Date(12, 24);
+
+        let diferenciaTiempo = diaNavidad.getTime() - hoy.getTime();
+
+        let diferenciaDias = diferenciaTiempo / (1000 * 3600 * 24);
+
+        alert("Quedan " + Math.abs(diferenciaDias) + " dias para navidad.");
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
