@@ -2,21 +2,28 @@
 
 <head>
     <script>
+        let diferencia = (numero) => {
+
+            if (numero < 19) {
+
+                return Math.abs(19 - numero);
+
+            } else if (numero == 19) {
+
+                return "El número es igual a 19.";
+
+            } else {
+
+                return (Math.abs(numero - 19) * 3);
+
+            }
+
+        };
         let numero = parseInt(prompt("Introduce el número."));
 
-        if (numero < 19) {
+        alert("Diferencia: "+diferencia(numero));
 
-            alert("La diferencia es de " + Math.abs(19 - numero));
 
-        } else if (numero == 19) {
-
-            alert("El número es igual a 19.");
-
-        } else {
-
-            alert("El doble de diferencia es de " + (Math.abs(numero - 19) * 3));
-
-        }
     </script>
 </head>
 

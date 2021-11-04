@@ -2,20 +2,25 @@
 
 <head>
     <script>
+        let suma = (numero1, numero2) => {
+
+            if (numero1 == numero2) {
+
+                return(numero1+numero2)*3;
+
+            } else {
+
+                return (numero1+numero2);
+
+            }
+
+        };
         let numero1 = parseInt(prompt("Introduce el número 1."));
         let numero2 = parseInt(prompt("Introduce el número 2."));
 
-        let suma = parseInt(numero1 + numero2);
+        alert("Suma: "+suma(numero1, numero2));
 
-        if (numero1 == numero2) {
-
-            alert("Los números son iguales, el resultado tripe de su suma es de: " + suma * 3);
-
-        } else {
-
-            alert("El resultado de la suma de los números es de: " + suma);
-
-        }
+        
     </script>
 </head>
 

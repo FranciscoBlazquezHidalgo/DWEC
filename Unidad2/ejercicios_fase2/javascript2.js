@@ -81,113 +81,127 @@
 //hecho
 (function ejercicio15() {
 
+    let comprobar = (numero) => {
+
+        if (numero < 13) {
+
+            return (13 - numero);
+
+        } else if (numero == 13) {
+
+            return "El número es igual a 13.";
+
+        } else {
+
+            return Math.abs((numero - 13) * 2);
+
+        }
+
+    };
+
     let numero = parseInt(prompt("Introduce el número."));
 
-    if (numero < 13) {
-
-        alert("La diferencia es de " + 13 - numero);
-
-    } else if (numero == 13) {
-
-        alert("El número es igual a 13.");
-
-    } else {
-
-        alert("El doble de diferencia es de " + Math.abs((numero - 13) * 2));
-
-    }
+    alert("Comprobar: " + comprobar(numero));
 
 });
 //hecho
 (function ejercicio16() {
 
+    let suma = (numero1, numero2) => {
+
+        if (numero1 == numero2) {
+
+            return (numero1 + numero2) * 3;
+
+        } else {
+
+            return (numero1 + numero2);
+
+        }
+
+    };
     let numero1 = parseInt(prompt("Introduce el número 1."));
     let numero2 = parseInt(prompt("Introduce el número 2."));
 
-    let suma = parseInt(numero1 + numero2);
-
-    if (numero1 == numero2) {
-
-        alert("Los números son iguales, el resultado tripe de su suma es de: " + suma * 3);
-
-    } else {
-
-        alert("El resultado de la suma de los números es de: " + suma);
-
-    }
+    alert("Suma: " + suma(numero1, numero2));
 
 });
 //hecho
 (function ejercicio17() {
 
+    let diferencia = (numero) => {
+
+        if (numero < 19) {
+
+            return Math.abs(19 - numero);
+
+        } else if (numero == 19) {
+
+            return "El número es igual a 19.";
+
+        } else {
+
+            return (Math.abs(numero - 19) * 3);
+
+        }
+
+    };
     let numero = parseInt(prompt("Introduce el número."));
 
-    if (numero < 19) {
-
-        alert("La diferencia es de " + Math.abs(19 - numero));
-
-    } else if (numero == 19) {
-
-        alert("El número es igual a 19.");
-
-    } else {
-
-        alert("El doble de diferencia es de " + (Math.abs(numero - 19) * 3));
-
-    }
+    alert("Diferencia: " + diferencia(numero));
 
 });
 //hecho
 (function ejercicio18() {
 
+    let comprobar = (numero1, numero2) => {
+
+        if (numero1 == 50) {
+
+            return true;
+
+        } else if (numero2 == 50) {
+
+            return true;
+
+        } else if (numero1 + numero2 == 50) {
+
+            return true;
+
+        }
+
+        return false;
+
+    };
     let numero1 = parseInt(prompt("Introduce el número 1."));
     let numero2 = parseInt(prompt("Introduce el número 2."));
 
-    if (numero1 == 50) {
-
-        alert("El número 1 es igual a 50.");
-
-        return true;
-
-    } else if (numero2 == 50) {
-
-        alert("El número 2 es igual a 50.");
-
-        return true;
-
-    } else if (numero1 + numero2 == 50) {
-
-        alert("La suma del número 1 y el 2 es 50.");
-
-        return true;
-
-    }
-
-    return false;
+    alert("Comprobar: " + comprobar(numero1, numero2));
 
 });
 //hecho
 (function ejercicio28() {
 
+    let comprobar = (numero1, numero2) => {
+
+        if (numero1 > 50 && numero1 < 99) {
+
+            return true;
+
+        }
+
+        if (numero2 > 50 && numero2 < 99) {
+
+            return true;
+
+        }
+
+        return false;
+
+    };
     let numero1 = parseInt(prompt("Introduce el número 1."));
     let numero2 = parseInt(prompt("Introduce el número 2."));
 
-    if (numero1 > 50 && numero1 < 99) {
-
-        alert("El número 1 está dentro del rango");
-
-        return true;
-
-    }
-
-    if (numero2 > 50 && numero2 < 99) {
-
-        alert("El número 2 está dentro del rango");
-
-        return true;
-
-    }
-
-    return false;
+    alert("Comprobar: " + comprobar(numero1, numero2));
 
 });
