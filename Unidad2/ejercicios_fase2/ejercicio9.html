@@ -4,13 +4,20 @@
     <script>
         let hoy = new Date();
 
-        let diaNavidad = new Date(12, 24);
+        let diaNavidad = new Date(hoy.getFullYear(), 11, 25);
+
+        if (hoy.getMonth() == 11 && hoy.getDate() > 25) {
+
+            diaNavidad.setFullYear(diaNavidad.getFullYear() + 1);
+
+        }
 
         let diferenciaTiempo = diaNavidad.getTime() - hoy.getTime();
 
         let diferenciaDias = diferenciaTiempo / (1000 * 3600 * 24);
 
-        alert("Quedan " + Math.abs(diferenciaDias) + " dias para navidad.");
+        alert("Quedan " + Math.abs(parseInt(diferenciaDias)) + " dias para navidad.");
+        
     </script>
 </head>
 

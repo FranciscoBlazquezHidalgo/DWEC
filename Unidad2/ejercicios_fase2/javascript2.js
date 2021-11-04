@@ -1,15 +1,15 @@
 //hecho
-(function ejercicio8(){
+(function ejercicio8() {
 
-    let aleatorio=(Math.random()*(10-1)+1);
+    let aleatorio = (Math.random() * (10 - 1) + 1);
 
-    let numero=prompt("Adivina un número aleatorio del 1 al 10.");
+    let numero = prompt("Adivina un número aleatorio del 1 al 10.");
 
-    if(numero==aleatorio){
+    if (numero == aleatorio) {
 
         alert("Buen trabajo.");
 
-    }else{
+    } else {
 
         alert("No coincide.");
 
@@ -17,137 +17,145 @@
 
 });
 //hecho
-(function ejercicio9(){
+(function ejercicio9() {
 
-    let hoy=new Date();
+    let hoy = new Date();
 
-    let diaNavidad=new Date(12, 24);
+    let diaNavidad = new Date(hoy.getFullYear(), 11, 25);
 
-    let diferenciaTiempo=diaNavidad.getTime()-hoy.getTime();
-  
-    let diferenciaDias=diferenciaTiempo/(1000 * 3600 * 24);
+    if (hoy.getMonth() == 11 && hoy.getDate() > 25) {
 
-    alert("Quedan "+Math.abs(diferenciaDias)+" dias para navidad.");
+        diaNavidad.setFullYear(diaNavidad.getFullYear() + 1);
 
-});
-//hecho
-(function ejercicio10(){
+    }
 
-    let numero1=parseInt(prompt("Introduce el número 1."));
-    let numero2=parseInt(prompt("Introduce el número 2."));
+    let diferenciaTiempo = diaNavidad.getTime() - hoy.getTime();
 
-    alert("Resultado de multiplicación: "+numero1*numero2);
-    alert("Resultado de división: "+numero1/numero2);
-    
-});
-//hecho
-(function ejercicio11(){
+    let diferenciaDias = diferenciaTiempo / (1000 * 3600 * 24);
 
-    let tCelsius=prompt("Introduce la temperatura en Celsius.");
-    let tFahrenheit=prompt("Introduce la temperatura en Fahrenheit.");
-
-    alert(tCelsius+"º C son"+((tCelsius*(9/5))+32)+" ºF.");
-    alert(tFahrenheit+"º F son"+((tFahrenheit-32)*(5/9))+" ºC.");
+    alert("Quedan " + Math.abs(parseInt(diferenciaDias)) + " dias para navidad.");
 
 });
 //hecho
-(function ejercicio12(){
+(function ejercicio10() {
+
+    let numero1 = parseInt(prompt("Introduce el número 1."));
+    let numero2 = parseInt(prompt("Introduce el número 2."));
+
+    alert("Resultado de multiplicación: " + numero1 * numero2);
+    alert("Resultado de división: " + numero1 / numero2);
+
+});
+//hecho
+(function ejercicio11() {
+
+    let tCelsius = prompt("Introduce la temperatura en Celsius.");
+    let tFahrenheit = prompt("Introduce la temperatura en Fahrenheit.");
+
+    alert(tCelsius + "º C son" + ((tCelsius * (9 / 5)) + 32) + " ºF.");
+    alert(tFahrenheit + "º F son" + ((tFahrenheit - 32) * (5 / 9)) + " ºC.");
+
+});
+//hecho
+(function ejercicio12() {
 
     alert(window.location.href);
 
 });
 //sin hacer
-(function ejercicio13(){
-    
-    let valor=prompt("Introduce el nombre de la variable.");
+(function ejercicio13() {
 
-    alert("Variable del usuario :"+variable);
+    let valor = prompt("Introduce el nombre de la variable.");
 
-});
-//sin hacer
-(function ejercicio14(){
-
-
+    alert("Variable del usuario :" + variable);
 
 });
 //hecho
-(function ejercicio15(){
+(function ejercicio14() {
 
-    let numero=parseInt(prompt("Introduce el número."));
+    let file = prompt("Introduce la ruta del archivo");
+    var ext = file.split('.').pop();
+    alert("Extensión: " + ext);
 
-    if(numero<13){
+});
+//hecho
+(function ejercicio15() {
 
-        alert("La diferencia es de "+13-numero);
+    let numero = parseInt(prompt("Introduce el número."));
 
-    }else if(numero==13){
+    if (numero < 13) {
+
+        alert("La diferencia es de " + 13 - numero);
+
+    } else if (numero == 13) {
 
         alert("El número es igual a 13.");
 
-    }else{
+    } else {
 
-        alert("El doble de diferencia es de "+Math.abs((numero-13)*2));
-
-    }
-
-});
-//hecho
-(function ejercicio16(){
-
-    let numero1=parseInt(prompt("Introduce el número 1."));
-    let numero2=parseInt(prompt("Introduce el número 2."));
-
-    let suma=parseInt(numero1+numero2);
-
-    if(numero1==numero2){
-
-        alert("Los números son iguales, el resultado tripe de su suma es de: "+suma*3);
-
-    }else{
-
-        alert("El resultado de la suma de los números es de: "+suma);
+        alert("El doble de diferencia es de " + Math.abs((numero - 13) * 2));
 
     }
 
 });
 //hecho
-(function ejercicio17(){
+(function ejercicio16() {
 
-    let numero=parseInt(prompt("Introduce el número."));
+    let numero1 = parseInt(prompt("Introduce el número 1."));
+    let numero2 = parseInt(prompt("Introduce el número 2."));
 
-    if(numero<19){
+    let suma = parseInt(numero1 + numero2);
 
-        alert("La diferencia es de "+Math.abs(19-numero));
+    if (numero1 == numero2) {
 
-    }else if(numero==19){
+        alert("Los números son iguales, el resultado tripe de su suma es de: " + suma * 3);
+
+    } else {
+
+        alert("El resultado de la suma de los números es de: " + suma);
+
+    }
+
+});
+//hecho
+(function ejercicio17() {
+
+    let numero = parseInt(prompt("Introduce el número."));
+
+    if (numero < 19) {
+
+        alert("La diferencia es de " + Math.abs(19 - numero));
+
+    } else if (numero == 19) {
 
         alert("El número es igual a 19.");
 
-    }else{
+    } else {
 
-        alert("El doble de diferencia es de "+(Math.abs(numero-19)*3));
+        alert("El doble de diferencia es de " + (Math.abs(numero - 19) * 3));
 
     }
 
 });
 //hecho
-(function ejercicio18(){
+(function ejercicio18() {
 
-    let numero1=parseInt(prompt("Introduce el número 1."));
-    let numero2=parseInt(prompt("Introduce el número 2."));
+    let numero1 = parseInt(prompt("Introduce el número 1."));
+    let numero2 = parseInt(prompt("Introduce el número 2."));
 
-    if(numero1==50){
+    if (numero1 == 50) {
 
         alert("El número 1 es igual a 50.");
 
         return true;
 
-    }else if(numero2==50){
+    } else if (numero2 == 50) {
 
         alert("El número 2 es igual a 50.");
 
         return true;
 
-    }else if(numero1+numero2==50){
+    } else if (numero1 + numero2 == 50) {
 
         alert("La suma del número 1 y el 2 es 50.");
 
@@ -159,12 +167,12 @@
 
 });
 //hecho
-(function ejercicio28(){
+(function ejercicio28() {
 
-    let numero1=parseInt(prompt("Introduce el número 1."));
-    let numero2=parseInt(prompt("Introduce el número 2."));
+    let numero1 = parseInt(prompt("Introduce el número 1."));
+    let numero2 = parseInt(prompt("Introduce el número 2."));
 
-    if(numero1>50 && numero1<99){
+    if (numero1 > 50 && numero1 < 99) {
 
         alert("El número 1 está dentro del rango");
 
@@ -172,7 +180,7 @@
 
     }
 
-    if(numero2>50 && numero2<99){
+    if (numero2 > 50 && numero2 < 99) {
 
         alert("El número 2 está dentro del rango");
 
