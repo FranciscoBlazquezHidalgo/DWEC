@@ -67,7 +67,7 @@
 
     let valor = prompt("Introduce el nombre de la variable.");
 
-    alert("Variable del usuario :" + variable);
+    alert("Variable del usuario :" + valor);
 
 });
 //hecho
