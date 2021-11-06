@@ -1,4 +1,4 @@
-//hecho
+//ejercicio 8
 (function ejercicio8() {
 
     let aleatorio = (Math.random() * (10 - 1) + 1);
@@ -16,7 +16,7 @@
     }
 
 });
-//hecho
+//ejercicio 9
 (function ejercicio9() {
 
     let hoy = new Date();
@@ -36,7 +36,7 @@
     alert("Quedan " + Math.abs(parseInt(diferenciaDias)) + " dias para navidad.");
 
 });
-//hecho
+//ejercicio 10
 (function ejercicio10() {
 
     let numero1 = parseInt(prompt("Introduce el número 1."));
@@ -46,7 +46,7 @@
     alert("Resultado de división: " + numero1 / numero2);
 
 });
-//hecho
+//ejercicio 11
 (function ejercicio11() {
 
     let tCelsius = prompt("Introduce la temperatura en Celsius.");
@@ -56,13 +56,13 @@
     alert(tFahrenheit + "º F son" + ((tFahrenheit - 32) * (5 / 9)) + " ºC.");
 
 });
-//hecho
+//ejercicio 12
 (function ejercicio12() {
 
     alert(window.location.href);
 
 });
-//sin hacer
+//ejercicio 13
 (function ejercicio13() {
 
     let valor = prompt("Introduce el nombre de la variable.");
@@ -70,7 +70,7 @@
     alert("Variable del usuario :" + valor);
 
 });
-//hecho
+//ejercicio 14
 (function ejercicio14() {
 
     let file = prompt("Introduce la ruta del archivo");
@@ -78,7 +78,7 @@
     alert("Extensión: " + ext);
 
 });
-//hecho
+//ejercicio 15
 (function ejercicio15() {
 
     let comprobar = (numero) => {
@@ -104,7 +104,7 @@
     alert("Comprobar: " + comprobar(numero));
 
 });
-//hecho
+//ejercicio 16
 (function ejercicio16() {
 
     let suma = (numero1, numero2) => {
@@ -126,7 +126,7 @@
     alert("Suma: " + suma(numero1, numero2));
 
 });
-//hecho
+//ejercicio 17
 (function ejercicio17() {
 
     let diferencia = (numero) => {
@@ -151,7 +151,7 @@
     alert("Diferencia: " + diferencia(numero));
 
 });
-//hecho
+//ejercicio 18
 (function ejercicio18() {
 
     let comprobar = (numero1, numero2) => {
@@ -179,7 +179,7 @@
     alert("Comprobar: " + comprobar(numero1, numero2));
 
 });
-//hecho
+//ejercicio 28
 (function ejercicio28() {
 
     let comprobar = (numero1, numero2) => {
