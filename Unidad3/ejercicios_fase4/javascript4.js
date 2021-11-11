@@ -218,7 +218,7 @@ function ejercicio31b() {
                 //Si el número es igual al valor de la posición actual, se elimina
                 if (matriz[i][h] == numero) {
 
-                    matriz.splice(matriz[i][h], 1);
+                    matriz[i].splice(i, 1);
 
                 }
 
