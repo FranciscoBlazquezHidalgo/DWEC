@@ -7,13 +7,9 @@ let eliminar = (numero) => {
 
         for (let h = 0; h < matriz[i].length; h++) {
             //Si el número es igual al valor de la posición actual, se elimina
-            if (numero == matriz[i][h]) {
+            if (matriz[i][h]==numero) {               
 
-                document.open();
-                document.write("Borrado");
-                document.close();
-
-                matriz.splice(matriz[i][h], 1);
+                matriz[i].splice(i, 1);
 
             }
 

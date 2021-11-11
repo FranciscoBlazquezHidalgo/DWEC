@@ -148,8 +148,21 @@ function ejercicio31a() {
 function ejercicio5() {
     //Matriz de cadenas de 2x3
     var matriz = [["hola", "a", "todos"], ["hasta", "la", "vista"]];
+    //Valor que contendrá la cadena de todos los valores de la matriz
+    let respuesta = "";
+    //Recorrido de cada fila y columna de la matriz
+    for (let i = 0; i < matriz.length; i++) {
+
+        for (let h = 0; h < matriz[i].length; h++) {
+            //La respuesta aumenta con el valor de la posición de la matriz con un espacio
+            respuesta += matriz[i][h] + " ";
+
+        }
+
+    }
+
     //Muestra de todas las cadenas juntas
-    alert("Cadena final: " + matriz.join(" "));
+    alert("Cadena final: " + respuesta);
 
 }
 //Ejercicio 8b
@@ -187,8 +200,6 @@ function ejercicio8b() {
 
         }
 
-
-
     }
     //Muestra del valor que más se repite de una matriz
     alert("Valor más repetido de la matriz: " + valorMaximo);
@@ -205,11 +216,7 @@ function ejercicio31b() {
 
             for (let h = 0; h < matriz[i].length; h++) {
                 //Si el número es igual al valor de la posición actual, se elimina
-                if (numero == matriz[i][h]) {
-
-                    document.open();
-                    document.write("Borrado");
-                    document.close();
+                if (matriz[i][h] == numero) {
 
                     matriz.splice(matriz[i][h], 1);
 
