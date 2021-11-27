@@ -1,0 +1,44 @@
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Ejercicio 13 - DOM b�sico y atributos XHTML</title>
+    <script type="text/javascript">
+        //Variable que indica la posición del array de etiquetas li
+        let posicion = 0;
+        //Función que añade un nuevo elemento al ul
+        function anade() {
+            //Variable de la lista lu
+            var ul = document.getElementById("lista");
+            //Variable que crea un nuevo elemento para la lista
+            var li = document.createElement("li");
+            //Se añade un valor al nuevo elemento para la lista obtenido del contenido de un elemento li
+            //según una determinada posición que aumenta al pulsar el botón
+            li.appendChild(document.createTextNode(document.getElementsByTagName("li")[posicion].innerHTML));
+            //Aumenta el contador posición
+            posicion++;
+            //Se añade el nuevo elemento al ul
+            ul.appendChild(li);
+
+        }
+
+    </script>
+</head>
+
+<body>
+    <ul id="lista">
+        <li>Lorem ipsum dolor sit amet</li>
+        <li>Consectetuer adipiscing elit</li>
+        <li>Sed mattis enim vitae orci</li>
+        <li>Phasellus libero</li>
+        <li>Maecenas nisl arcu</li>
+    </ul>
+    <input type="button" value="A�adir elemento" onclick="if (!window.__cfRLUnblockHandlers); anade(); return false;">
+    <a href="ejercicios.html">Volver al selector de ejercicios</a>
+    <a href="Ejercicio 11 - DOM basico.html">Ejercicio 11</a>
+
+</body>
+
+</html>
