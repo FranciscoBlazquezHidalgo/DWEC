@@ -1,0 +1,47 @@
+<html>
+
+<head>
+    <script>
+        function validar() {
+
+            var dni = document.getElementsByTagName("input")[0].value;
+            var expresion_regular_dni = /^\d{8}[a-zA-Z]$/;
+
+            if (expresion_regular_dni.test(dni) == true) {
+
+                var numero = dni.substr(0, dni.length - 1);
+                var letra1 = dni.substr(dni.length - 1, 1);
+
+                numero = numero % 23;
+
+                var letra2 = 'TRWAGMYFPDXBNJZSQVHLCKET';
+                letra2 = letra2.substring(numero, numero + 1);
+
+                if (letra2 != letra1.toUpperCase()) {
+
+                    return false;
+
+                } else {
+
+                    return true;
+                    document.getElementsByTagName("input")[0].focus();
+
+                }
+
+            } else {
+
+                return false;
+
+            }
+
+        }
+    </script>
+</head>
+
+<body>
+    <form onsubmit="return validar();">
+        <input type="text" placeholder="DNI">
+    </form>
+</body>
+
+</html>

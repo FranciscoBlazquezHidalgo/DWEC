@@ -1,0 +1,24 @@
+<html>
+
+<head>
+    <script>
+        function validar() {
+
+            var palabra1 = document.getElementsByTagName("input")[0].value;
+            var palabra2 = document.getElementsByTagName("input")[1].value;
+
+            return palabra1.toLowerCase().split("").sort().join("") === palabra2.toLowerCase().split("").sort().join("");
+
+        }
+    </script>
+</head>
+
+<body>
+    <form>
+        <input type="text" placeholder="Palabra 1">
+        <input type="text" placeholder="Palabra 2">
+        <button onclick="return validar()";>Validar</button>
+    </form>
+</body>
+
+</html>

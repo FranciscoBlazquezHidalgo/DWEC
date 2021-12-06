@@ -1,0 +1,62 @@
+<html>
+
+<head>
+    <script>
+        
+        function validar() {
+
+            var listaServidores = ["terra.es", "google.com", "marca.es", "yahoo.es"];
+
+            var email = document.getElementsByTagName("input")[0].value;
+
+            var mail_format = /^w+([.-]?w+)*@w+([.-]?w+)*(.w{2,3})+$/;
+
+            if (email.match(email)) {
+
+                if (comprobarDireccion(email)) {
+
+                    document.getElementsByTagName("input")[0].focus();
+
+                    return true;
+
+                }
+
+            } else {
+
+                return false;
+
+            }
+
+        }
+
+        let comprobarDireccion = (email) => {
+
+            var correo = email.split("@");
+            var servidor = correo[1];
+
+            var listaServidores = ["terra.es", "google.com", "marca.es", "yahoo.es"];
+
+            for (let i = 0; i < listaServidores.length; i++) {
+
+                if (servidor == listaServidores[i]) {
+
+                    return true;
+
+                }
+
+            }
+
+            return false;
+
+        };
+
+    </script>
+</head>
+
+<body>
+    <form onsubmit="return validar();">
+        <input type="text" placeholder="Correo">
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,97 @@
+<html>
+
+<head>
+    <script>
+
+        function cambiar() {
+
+            var Alicante = ["Alicante Capital", "Elche", "Orihuela"];
+            var Castellon = ["Castelllón Capital", "Oropesa", "Vinaroz"];
+            var Valencia = ["Valencia Capital", "Torrent", "Mislata"];
+
+            var opcion1 = document.getElementById("select1");
+
+            if (opcion1.options[opcion1.selectedIndex].value == 1) {
+
+                crearOptions(Alicante);
+
+            } else if (opcion1.options[opcion1.selectedIndex].value == 2) {
+
+                crearOptions(Castellon);
+
+            } else if (opcion1.options[opcion1.selectedIndex].value == 3) {
+
+                crearOptions(Valencia);
+
+                var opcion2 = document.getElementById("select2");
+
+                opcion2.selectedIndex = 3;
+
+            }
+
+        }
+
+        function crearOptions(lista) {
+
+            vaciar();
+
+            let opcion2 = document.getElementById("select2");
+            let h = 1;
+
+            for (let i = 0; i < lista.length; i++) {
+
+                var opcion = document.createElement("option");
+                opcion.value = h;
+                opcion.innerHTML = lista[i];
+                opcion2.appendChild(opcion);
+
+                h++;
+
+            }
+
+        }
+
+        function vaciar() {
+
+            let opcion2 = document.getElementById("select2");
+
+            for (let i = 0; i < opcion2.length; i++) {
+
+                opcion2.remove(i);
+
+            }
+
+        }
+
+        function validar() {
+
+            if (document.getElementById("select1").options.selectedIndex.value != 0 && document.getElementById("select2").options.selectedIndex.value != 0) {
+
+                alert("Validado");
+
+                return true;
+
+            }
+
+            return false;
+
+        }
+
+    </script>
+</head>
+
+<body>
+    <form onsubmit="return validar();">
+        <select id="select1" name="select" onchange="cambiar()">
+            <option value="0">Select no seleccionado</option>
+            <option value="1">Alicante</option>
+            <option value="2">Castellón</option>
+            <option value="3">Valencia</option>
+        </select>
+        <select id="select2" name="select">
+            <option value="0">Select no seleccionado</option>
+        </select>
+    </form>
+</body>
+
+</html>

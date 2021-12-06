@@ -1,0 +1,50 @@
+<html>
+
+<head>
+    <link href="../estilo.css" rel="stylesheet" type="text/css">
+    <script src="ejercicio1.js"></script>
+</head>
+
+<body>
+    <div class="col align-items-center justify-content-around text-center justify-content-center margin-vertical">
+        <div class="row justify-content-around align-items-center">
+            <div class="col margin-vertical5">
+                <h2 class="arial text-center margin-vertical5 hidden error" id="nombreError">Nombre no válido</h2>
+                <input type="text" class="textbox arial text-center margin-vertical5" placeholder="Nombre"
+                    id="textboxNombre">
+                <h2 class="arial text-center margin-vertical5 hidden error" id="correoError">Correo no válido</h2>
+                <input type="text" class="textbox arial text-center margin-vertical5" placeholder="Correo"
+                    id="textboxCorreo">
+            </div>
+
+            <div class="col margin-vertical5">
+                <h2 class="arial text-center margin-vertical5 hidden error" id="contraError">Las contraseñas no
+                    coinciden</h2>
+                <input type="password" class="textbox arial text-center margin-vertical5" placeholder="Contraseña"
+                    id="textboxContra1">
+                <input type="password" class="textbox arial text-center margin-vertical5"
+                    placeholder="Repite la ontraseña" id="textboxContra2">
+            </div>
+            <div class="col margin-vertical5">
+                <h2 class="arial text-center margin-vertical5">¿Cuánto es 5 + 3?</h2>
+
+                <h2 class="arial text-center margin-vertical5 hidden error" id="resError">Resultado incorrecto</h2>
+                <input type="number" class="textbox arial text-center margin-vertical5" placeholder="Resultado"
+                    id="textboxRes">
+                <h2 class="arial text-center margin-vertical5 hidden error" id="checkError">No seleccionado</h2>
+                <div class="row align-items-center text-center justify-content-around margin-vertical5">
+                    <input class="checkbox" id="checkbox" type="checkbox">
+                    <h2 class="arial text-center margin-horizontal">Acepto las condiciones</h2>
+                </div>
+
+            </div>
+        </div>
+        <div class="row justify-content-around align-items-center">
+            <button id="btnEnviar" class="calibri">Enviar</button>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
