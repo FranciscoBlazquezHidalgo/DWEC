@@ -1,0 +1,264 @@
+body{
+
+    resize: both;
+    background: #D5EDF2;;
+
+}
+
+nav{
+
+    background: #FAC2AC;
+
+}
+
+footer{
+
+    background: #FAC2AC;
+
+}
+
+.row{
+    display: flex;
+    flex-direction: row;
+    resize: both;
+    justify-items: center;
+}
+
+.col{
+
+    display: flex;
+    flex-direction: column;
+    resize: both;
+    justify-items: center;
+
+}
+
+.justify-content-center{
+
+    justify-content: center;
+
+}
+
+.justify-content-between{
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.justify-content-around{
+    display: flex;
+    justify-content:space-around;
+
+}
+
+.aling-items-center{
+    display: flex;
+    align-items: center;
+}
+
+.text-center{
+    text-align: center;
+}
+
+a{
+
+    color: black;
+    text-decoration: none;
+
+}
+
+.arial{
+
+    font-family: Arial;
+
+}
+
+article{
+    border: solid grey 0.1cm;
+    border-radius: 1%;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-around;
+    background-color: white;
+    width: 10cm;
+
+}
+article h2{
+
+    text-align: center;
+
+}
+
+.calibri{
+
+    font-family: Calibri;
+
+}
+
+.logo{
+
+    resize: both;
+    height: 3cm;
+    width: 3cm;
+
+}
+
+.margin-horizontal{
+
+    margin-left: 1cm;
+    margin-right: 1cm;
+    justify-items: center;
+
+}
+
+.margin-vertical{
+
+    margin-top: 1cm;
+    margin-bottom: 1cm;
+    justify-items: center;
+
+}
+
+.margin-vertical5{
+
+    margin-top: 0.5cm;
+    margin-bottom: 0.5cm;
+    justify-items: center;
+
+}
+
+.i{
+
+    margin-left: 1fr;
+    margin-right: 1fr;
+
+}
+
+i{
+
+    margin-left: 1fr;
+    margin-right: 1fr;
+
+}
+
+/*img{
+
+    max-width:100%;
+    max-height: 100%;
+    height: auto;
+    width: auto;
+
+}*/
+
+.wrap-content{
+
+    display: flex;
+
+}
+
+.logo{
+
+    height: 90px;
+    width: 90px;
+
+}
+
+.icono{
+
+    object-fit: scale-down;
+
+}
+
+.iconoD{
+
+    height: 15px;
+    width: 15px;
+
+}
+
+p{
+
+    text-align: center;
+
+}
+
+.border{
+
+    border: solid black 2px;
+
+}
+
+.login{
+
+    background: white;
+
+}
+
+.textbox{
+
+    height: 1cm;
+    width: 10cm;
+    font-size: 0.5cm;
+    border-radius: 2%;
+}
+
+.textbox-fecha{
+
+    height: 1cm;
+    width: 4.5cm;
+    font-size: 0.5cm;
+    border-radius: 2%;
+
+}
+
+button{
+
+    background-color: white;
+    height: 2cm;
+    width: 4cm;
+    font-size: 0.75cm;
+    border: solid grey 0.1cm;
+    border-radius: 5%;
+
+}
+
+.checkbox{
+
+    height: 1cm;
+    width: 1cm;
+
+}
+
+.error{
+
+    color: red;
+
+}
+
+.acierto{
+
+    color: green;
+
+}
+
+.visible{
+
+    display: inline;
+
+}
+
+.hidden{
+
+    
+    display: none;
+
+}
+
+.textbox1{
+
+    height: 1cm;
+    width: 1cm;
+    font-size: 0.5cm;
+    border-radius: 2%;
+
+}

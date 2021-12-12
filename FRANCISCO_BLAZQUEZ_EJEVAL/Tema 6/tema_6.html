@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../estilo.css" rel="stylesheet" type="text/css">
+    <script src="tema_6.js"></script>
+    <title>Tema 6</title>
+</head>
+
+<body>
+    <div class="col align-items-center justify-content-around text-center justify-content-center margin-vertical">
+        <!--EJERCICIO 1-->
+        <div class="row justify-content-around align-items-center margin-vertical5">
+            <div class="col margin-vertical5">
+                <form>
+                    <input id="textboxDNI" type="text" class="textbox arial text-center margin-horizontal" placeholder="DNI">
+                    <button id="btnDNI">Validar</button>
+                </form>
+            </div>
+        </div>
+        <!--EJERCICIO 2-->
+        <div class="row justify-content-around align-items-center margin-vertical5">
+            <div class="col margin-vertical5">
+                <form>
+                    <input id="textboxCorreo" type="text" class="textbox arial text-center margin-horizontal" placeholder="Correo">
+                    <button id="btnCorreo">Validar</button>
+                </form>
+            </div>
+        </div>
+        <!--EJERCICIO 3-->
+        <div class="row justify-content-around align-items-center margin-vertical5">
+            <div class="col margin-vertical5">
+                <form>
+                    <input id="textboxPalabra1" type="text" class="textbox arial text-center margin-horizontal" placeholder="Palabra 1">
+                    <input id="textboxPalabra2" type="text" class="textbox arial text-center margin-horizontal" placeholder="Palabra 2">
+                    <button id="btnPalabras">Validar</button>
+                </form>
+            </div>
+        </div>
+        <!--EJERCICIO 4-->
+        <div class="row justify-content-around align-items-center margin-vertical5">
+            <div class="col margin-vertical5">
+                <form onsubmit="return validar();">
+                    <select id="select1" type="text" class="textbox arial text-center margin-horizontal" name="select" onchange="cambiar()">
+                        <option value="0">Select no seleccionado</option>
+                        <option value="1">Alicante</option>
+                        <option value="2">Castellón</option>
+                        <option value="3">Valencia</option>
+                    </select>
+                    <select id="select2" type="text" class="textbox arial text-center margin-horizontal" name="select">
+                        <option value="0">Select no seleccionado</option>
+                    </select>
+                    <button id="btnSelect">Validar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

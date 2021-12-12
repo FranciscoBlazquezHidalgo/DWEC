@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../estilo.css" rel="stylesheet" type="text/css">
+    <script src="evaluativo.js"></script>
+    <title>Evaluativo</title>
+</head>
+
+<body>
+    <!--EJERCICIO 1-->
+    <div class="row align-items-center justify-content-around text-center justify-content-center margin-vertical">
+            <div
+                class="col align-items-center justify-content-around text-center justify-content-center margin-vertical">
+                <div class="row justify-content-around align-items-center">
+                    <div class="col margin-vertical5 margin-horizontal">
+                        <h2 class="arial text-center margin-vertical5 hidden error" id="nombreError">Nombre no válido
+                        </h2>
+                        <input type="text" class="textbox arial text-center margin-vertical5" placeholder="Nombre"
+                            id="textboxNombre">
+                        <h2 class="arial text-center margin-vertical5 hidden error" id="correoError">Correo no válido
+                        </h2>
+                        <input id="textboxCorreo" type="text" class="textbox arial text-center margin-vertical5" placeholder="Correo"
+                            id="textboxCorreo">
+                    </div>
+
+                    <div class="col margin-vertical5 margin-horizontal">
+                        <h2 class="arial text-center margin-vertical5 hidden error" id="contraError">Las contraseñas no
+                            coinciden</h2>
+                        <input type="password" class="textbox arial text-center margin-vertical5"
+                            placeholder="Contraseña" id="textboxContra1">
+                        <input type="password" class="textbox arial text-center margin-vertical5"
+                            placeholder="Repite la ontraseña" id="textboxContra2">
+                    </div>
+                    <div class="col margin-vertical5 margin-horizontal">
+                        <h2 class="arial text-center margin-vertical5">¿Cuánto es 5 + 3?</h2>
+
+                        <h2 class="arial text-center margin-vertical5 hidden error" id="resError">Resultado incorrecto
+                        </h2>
+                        <input type="number" class="textbox arial text-center margin-vertical5" placeholder="Resultado"
+                            id="textboxRes">
+                        <h2 class="arial text-center margin-vertical5 hidden error" id="checkError">No seleccionado</h2>
+                        <div class="row align-items-center text-center justify-content-around margin-vertical5">
+                            <input class="checkbox" id="checkbox" type="checkbox">
+                            <h2 class="arial text-center margin-horizontal">Acepto las condiciones</h2>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="row justify-content-around align-items-center">
+                    <button id="btnEnviar" class="calibri">Enviar</button>
+                </div>
+
+            </div>
+    </div>
+    <!--EJERCICIO 2-->
+    <div class="row align-items-center justify-content-around text-center justify-content-center margin-vertical">
+            <div
+                class="col align-items-center justify-content-around text-center justify-content-center margin-vertical">
+                <h2 class="arial text-center margin-vertical5">Adivina el siguiente refran</h2>
+                <div class="row justify-content-around align-items-center margin-vertical" id="fila">
+                    <div id="palabra1" class="margin-horizontal">
+                        <input type="text" maxlength="1" class="textbox1" name="letra">
+                        <input type="text" maxlength="1" class="textbox1" name="letra">
+                        <input type="text" maxlength="1" class="textbox1" name="letra">
+                    </div>
+                    <div id="palabra2" class="margin-horizontal">
+                        <input type="text" maxlength="1" class="textbox1" name="letra">
+                        <input type="text" maxlength="1" class="textbox1" name="letra">
+                        <input type="text" maxlength="1" class="textbox1" name="letra">
+                    </div>
+                    <div id="palabra3" class="margin-horizontal">
+                        <input type="text" maxlength="1" class="textbox1" name="letra">
+                        <input type="text" maxlength="1" class="textbox1" name="letra">
+                    </div>
+                    <div id="palabra4" class="margin-horizontal">
+                        <input type="text" maxlength="1" class="textbox1" name="letra">
+                        <input type="text" maxlength="1" class="textbox1" name="letra">
+                        <input type="text" maxlength="1" class="textbox1" name="letra">
+                        <input type="text" maxlength="1" class="textbox1" name="letra">
+                        <input type="text" maxlength="1" class="textbox1" name="letra">
+                        <input type="text" maxlength="1" class="textbox1" name="letra">
+                    </div>
+                    <div id="palabra5" class="margin-horizontal">
+                        <input type="text" maxlength="1" class="textbox1" name="letra">
+                        <input type="text" maxlength="1" class="textbox1" name="letra">
+                        <input type="text" maxlength="1" class="textbox1" name="letra">
+                    </div>
+                    <div id="palabra6" class="margin-horizontal">
+                        <input type="text" maxlength="1" class="textbox1" name="letra">
+                        <input type="text" maxlength="1" class="textbox1" name="letra">
+                    </div>
+                </div>
+                <div class="row justify-content-around align-items-center">
+                        <button id="btnIniciar" class="calibri margin-horizontal">Iniciar</button>
+                        <button id="btnParar" class="calibri margin-horizontal">Parar</button>
+
+                </div>
+
+            </div>
+    </div>
+    <!--EJERCICIO 3-->
+    <div class="row align-items-center justify-content-around text-center justify-content-center margin-vertical">
+            <div
+                class="col align-items-center justify-content-around text-center justify-content-center margin-vertical">
+                <h2 class="arial text-center margin-vertical5">Adivina la palabra oculta</h2>
+                <div class="row text-center justify-content-center align-items-center">
+                    <div
+                        class="row justify-content-around justify-content-center calibri text-center aling-items-center">
+                        <h4 class="arial text-center margin-horizontal">Letras</h4>
+                        <input type="text" class="textbox arial text-center" id="textboxLetras">
+                    </div>
+                </div>
+                <div class="row text-center justify-content-center align-items-center">
+                    <div
+                        class="row justify-content-around justify-content-center calibri text-center aling-items-center">
+                        <h4 class="arial text-center margin-horizontal">Palabra</h4>
+                        <input type="text" class="textbox arial text-center" id="textboxPalabra">
+                    </div>
+                </div>
+                <div class="row justify-content-around calibri text-center aling-items-center margin-vertical">
+                    <div class="col margin-horizontal">
+                        <button class="calibri" id="btnNuevaPalabra">Nueva palabra</button>
+                    </div>
+                    <div class="col margin-horizontal">
+                        <button class="calibri" id="btnSolucion">Ver solución</button>
+                    </div>
+                    <div class="col">
+                        <button class="calibri" id="btnFin">Finalizar juego</button>
+                    </div>
+                </div>
+                <div class="row justify-content-around calibri text-center aling-items-center margin-vertical">
+                    <h2 class="arial text-center margin-vertical5 hidden error" id="aciertos"></h2>
+                </div>
+            </div>
+    </div>
+</body>
+
+</html>
